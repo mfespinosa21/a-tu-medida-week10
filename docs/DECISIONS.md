@@ -8,7 +8,7 @@
 - No backend or persistent case records; only fictional inputs in browser memory. This avoids collecting real records without auth. Production assisted delivery requires authenticated private records and operator controls before launch.
 - Real defects were recorded: budget overwritten, shipping ignored, zero rejected and numerical syntax too permissive. Pass 2 core regression: 14/14.
 - Persona review took place in a fresh independent session using source text; no screenshot-based persona test claimed. Worst confusion repaired, independent text retest passed.
-- Two deployment cycle planned: initial functional build, then repaired build. Actual deployment records are in TEST_LOG and final delivery materials.
+- Two deployments verified succeeded: initial functional build and repaired build. Actual deployment IDs and commit hashes are in TEST_LOG.
 - Sites owner-private access retained; permission for an evaluator is not implied. Native source is not a GitHub repository.
 
 ## Tomorrow's first move

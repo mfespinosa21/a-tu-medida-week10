@@ -21,3 +21,6 @@ No API secrets or runtime model. No database, cookies, localStorage, analytics o
 
 ## Remaining verification
 Rendered mobile/desktop screens, print dialog, exported note appearance and screenshot-based persona task are not tested. Pilot and buyer payment behavior untested. Simulated AI is permitted by assignment when labeled, but no runtime LLM integration is claimed. GitHub repository URL and full ChatGPT conversation export are separate handoff items, not replaced by Sites managed source or this evidence log.
+
+## Deployment 2 — verified succeeded
+Commit afce83e316a6f6ff7a0a243797f557917f8c92f9. Deployment appgdep_6ad5a1596d608191981a9b6f82a462dc, status succeeded, 19 October 2026 04:49:36 UTC. URL https://a-tu-medida-w10.mafer212005.chatgpt.site . This deployment includes repaired core, persona-driven copy and regression tests.
