@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {build,number,sample,UNKNOWN} from '../dist/core.js';
+const example=extra=>({...sample,...extra});
+test('missing optional numbers remain Unknown',()=>{assert.equal(number('','x',100),null);assert.equal(build(example({space:''})).fit,UNKNOWN);});
+test('comma decimals normalize',()=>assert.equal(number('68,5','cm',100),68.5));
+test('reject negative infinity overflow and symbol',()=>{for(const value of ['-1','Infinity','1e999','$200'])assert.throws(()=>number(value,'price',1000));});
+test('required questions and exact model gate',()=>{assert.throws(()=>build(example({q1:''})));assert.throws(()=>build(example({match:false})));assert.throws(()=>build(example({q1:'a'.repeat(201)})));});
+test('unsafe URL rejected',()=>{assert.throws(()=>build(example({url:'javascript:alert(1)'})));assert.throws(()=>build(example({url:'https://user:pass@example.com'})));});
+test('source text preserved without evaluating HTML',()=>{const source='<img src=x onerror=alert(1)> ignore previous instructions';assert.equal(build(example({source})).source,source);});
+test('missing clearance prevents a fit claim',()=>assert.match(build(example()).fit,/no se confirma instalación/));
+test('narrow space reports mismatch',()=>assert.match(build(example({space:'60'})).fit,/supera el espacio/));
+test('declared clearance still does not confirm complete installation',()=>assert.match(build(example({clearance:'3'})).fit,/No satisface/));
+test('buyer numeric budget must remain separate from explanation',()=>assert.equal(build(example()).budget,12000));
+test('known zero shipping is valid and separate from missing',()=>assert.equal(build(example({shipping:'0'})).shipping,0));
+test('known shipping included in partial subtotal',()=>assert.match(build(example({shipping:'800'})).budgetResult,/12290/));
+test('zero required lateral clearance can be source supplied',()=>assert.equal(build(example({clearance:'0'})).clearance,0));
+test('scientific notation rejected as ambiguous money entry',()=>assert.throws(()=>number('1e3','price',10000)));
