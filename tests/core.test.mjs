@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build,number,sample,UNKNOWN} from '../dist/core.js';
-const example=extra=>({...sample,...extra});
+const example=extra=>({...sample,match:true,...extra});
 test('missing optional numbers remain Unknown',()=>{assert.equal(number('','x',100),null);assert.equal(build(example({space:''})).fit,UNKNOWN);});
 test('comma decimals normalize',()=>assert.equal(number('68,5','cm',100),68.5));
 test('reject negative infinity overflow and symbol',()=>{for(const value of ['-1','Infinity','1e999','$200'])assert.throws(()=>number(value,'price',1000));});

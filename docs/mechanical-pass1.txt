@@ -1,0 +1,109 @@
+✔ missing optional numbers remain Unknown (1.374178ms)
+✔ comma decimals normalize (0.114252ms)
+✔ reject negative infinity overflow and symbol (0.233001ms)
+✔ required questions and exact model gate (0.221203ms)
+✔ unsafe URL rejected (0.247803ms)
+✔ source text preserved without evaluating HTML (0.136004ms)
+✔ missing clearance prevents a fit claim (0.175775ms)
+✔ narrow space reports mismatch (0.167602ms)
+✔ declared clearance still does not confirm complete installation (0.193952ms)
+✖ buyer numeric budget must remain separate from explanation (0.945593ms)
+✖ known zero shipping is valid and separate from missing (0.159851ms)
+✖ known shipping included in partial subtotal (0.161563ms)
+✖ zero required lateral clearance can be source supplied (0.094612ms)
+✖ scientific notation rejected as ambiguous money entry (0.122755ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 9
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 82.546078
+
+✖ failing tests:
+
+test at tests/core.test.mjs:14:1
+✖ buyer numeric budget must remain separate from explanation (0.945593ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Precio publicado queda dentro de tu límite por $510.00 MXN. Envío y otros cargos Unknown: no se confirma costo total ni asequibilidad.'
+  - 12000
+  
+      at TestContext.<anonymous> (file:///workspace/sites/a-tu-medida-w10/tests/core.test.mjs:14:78)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Precio publicado queda dentro de tu límite por $510.00 MXN. Envío y otros cargos Unknown: no se confirma costo total ni asequibilidad.',
+    expected: 12000,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/core.test.mjs:15:1
+✖ known zero shipping is valid and separate from missing (0.159851ms)
+  Error: Envío: escribe un número mayor que 0 y hasta 1000000, sin signo de pesos ni separadores de miles.
+      at number (file:///workspace/sites/a-tu-medida-w10/dist/core.js:5:44)
+      at build (file:///workspace/sites/a-tu-medida-w10/dist/core.js:17:251)
+      at TestContext.<anonymous> (file:///workspace/sites/a-tu-medida-w10/tests/core.test.mjs:15:80)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/core.test.mjs:16:1
+✖ known shipping included in partial subtotal (0.161563ms)
+  AssertionError [ERR_ASSERTION]: The "string" argument must be of type string. Received type undefined (undefined)
+      at TestContext.<anonymous> (file:///workspace/sites/a-tu-medida-w10/tests/core.test.mjs:16:63)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /12290/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/core.test.mjs:17:1
+✖ zero required lateral clearance can be source supplied (0.094612ms)
+  Error: Holgura total requerida: escribe un número mayor que 0 y hasta 1000, sin signo de pesos ni separadores de miles.
+      at number (file:///workspace/sites/a-tu-medida-w10/dist/core.js:5:44)
+      at build (file:///workspace/sites/a-tu-medida-w10/dist/core.js:17:251)
+      at TestContext.<anonymous> (file:///workspace/sites/a-tu-medida-w10/tests/core.test.mjs:17:80)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/core.test.mjs:18:1
+✖ scientific notation rejected as ambiguous money entry (0.122755ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/sites/a-tu-medida-w10/tests/core.test.mjs:18:73)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }

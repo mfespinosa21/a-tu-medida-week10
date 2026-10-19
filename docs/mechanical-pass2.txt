@@ -1,0 +1,22 @@
+✔ missing optional numbers remain Unknown (1.551791ms)
+✔ comma decimals normalize (0.114381ms)
+✔ reject negative infinity overflow and symbol (0.288413ms)
+✔ required questions and exact model gate (0.238789ms)
+✔ unsafe URL rejected (0.216034ms)
+✔ source text preserved without evaluating HTML (0.145017ms)
+✔ missing clearance prevents a fit claim (0.214663ms)
+✔ narrow space reports mismatch (0.169314ms)
+✔ declared clearance still does not confirm complete installation (0.227221ms)
+✔ buyer numeric budget must remain separate from explanation (0.221072ms)
+✔ known zero shipping is valid and separate from missing (0.216706ms)
+✔ known shipping included in partial subtotal (0.113651ms)
+✔ zero required lateral clearance can be source supplied (3.372126ms)
+✔ scientific notation rejected as ambiguous money entry (0.115854ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85.412279
