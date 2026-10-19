@@ -24,3 +24,6 @@ Rendered mobile/desktop screens, print dialog, exported note appearance and scre
 
 ## Deployment 2 — verified succeeded
 Commit afce83e316a6f6ff7a0a243797f557917f8c92f9. Deployment appgdep_6ad5a1596d608191981a9b6f82a462dc, status succeeded, 19 October 2026 04:49:36 UTC. URL https://a-tu-medida-w10.mafer212005.chatgpt.site . This deployment includes repaired core, persona-driven copy and regression tests.
+
+## Screenshot-based review addendum
+Three user-supplied live screenshots were inspected by a fresh synthetic persona session. New issue: arithmetic can falsely reassure before caveats. Added an early unresolved-installation/final-cost summary and concrete seller questions; simplified repeated Unknown labels. Core regression suite still passes. Screenshots document pre-addendum visual state; post-change visual retest, export and deletion remain unverified.

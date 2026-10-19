@@ -13,3 +13,6 @@
 
 ## Tomorrow's first move
 Open the live app as owner and capture the real screens; run the fresh-chat screenshot persona task, print a note and inspect its PDF. Create/connect a Week 10 GitHub repository, push the included Git history, verify evaluator access, export the full conversation, then record the 3:30 face/demo video. Do not submit a claim that these steps already happened.
+
+## Later session close — screenshot review
+Fresh screenshot-based persona pass now covers three actual browser captures. Added an early unresolved-installation/total-cost summary and seller questions. Next move: refresh live URL, inspect the revised summary and print export; GitHub mutation remains blocked by automatic-review capacity failure, and full conversation export/video remain owner actions.

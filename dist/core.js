@@ -1,4 +1,4 @@
-export const UNKNOWN='Por confirmar (Unknown)';
+export const UNKNOWN='Por confirmar';
 export function number(value,label,max,allowZero=false){
  const text=String(value??'').trim(); if(!text)return null;
  const n=Number(text.replace(',','.'));
@@ -18,7 +18,7 @@ export function build(data){
  if(!data.match)throw new Error('Confirma que el modelo de la fuente coincide con el producto. Si no puedes, detén la nota.');
  const gap=d.space!==null&&d.width!==null?d.space-d.width:null;
  let fit=UNKNOWN;
- if(gap!==null){fit=gap<0?`Diferencia de ancho: ${gap.toFixed(1)} cm. El equipo supera el espacio indicado.`:d.clearance===null?`Diferencia de ancho: ${gap.toFixed(1)} cm. Espacio libre requerido por confirmar (Unknown): no se confirma instalación.`:`Diferencia de ancho: ${gap.toFixed(1)} cm; holgura total declarada: ${d.clearance} cm. ${gap>=d.clearance?'El cálculo de ancho satisface esa holgura declarada.':'No satisface esa holgura declarada.'} Altura, fondo, accesos y manual siguen por confirmar.`;}
+ if(gap!==null){fit=gap<0?`Diferencia de ancho: ${gap.toFixed(1)} cm. El equipo supera el espacio indicado.`:d.clearance===null?`Diferencia de ancho: ${gap.toFixed(1)} cm. Espacio libre requerido por confirmar: no se confirma instalación.`:`Diferencia de ancho: ${gap.toFixed(1)} cm; holgura total declarada: ${d.clearance} cm. ${gap>=d.clearance?'El cálculo de ancho satisface esa holgura declarada.':'No satisface esa holgura declarada.'} Altura, fondo, accesos y manual siguen por confirmar.`;}
  let budgetResult=UNKNOWN;
  if(d.budget!==null&&d.price!==null){const known=d.price+(d.shipping??0);const delta=d.budget-known;budgetResult=`Subtotal conocido: $${known.toFixed(2)} MXN (precio $${d.price.toFixed(2)} + envío ${d.shipping===null?UNKNOWN:`$${d.shipping.toFixed(2)}`}). Este subtotal ${delta<0?'supera':'queda dentro de'} tu límite por $${Math.abs(delta).toFixed(2)} MXN. Otros cargos por confirmar; si falta envío, tampoco está incluido. No se confirma el costo final ni que puedas pagarlo.`;}
  return {...d,fit,budgetResult,sourceChecked:!!data.sourceChecked,created:new Date().toISOString()};
