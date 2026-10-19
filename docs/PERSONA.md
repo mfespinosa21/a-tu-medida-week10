@@ -29,3 +29,6 @@ Mechanical checks verify original budget 12000; price 11490 + shipping 800 = kno
 
 ## Screenshot test to finish
 In a fresh chat, use the persona above and upload actual captures of: empty page, edited example, note with missing clearance, reviewed export, and cleared case. Ask for an out-loud attempt at the two-question task. Preserve full responses, fix the worst remaining confusion, retest and append evidence. A mockup is not a screenshot.
+
+## Independent retest result
+Fresh synthetic persona session re-read repaired code and executed build() directly: PASS for numeric budget, known shipping, zero vs blank, unchecked model gate, next questions, clear wording and missing clearance. Price 11490 plus shipping 600 yields subtotal 12090 and exceeds 12000 by 90. Hypothetical reaction: “Ahora sí veo mis doce mil y entiendo que el envío puede hacerme pasar del límite. También sé qué pedirle al vendedor.” Remaining minor copy concerns were corrected for zero-permitted errors, preparation-gate wording and plain-language affordability heading. No screenshot or browser claim.
