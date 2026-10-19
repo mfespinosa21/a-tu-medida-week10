@@ -1,9 +1,6 @@
 # A TU MEDIDA — Week 10
+Fernanda Espinosa. Buyer-controlled purchase note.
 
-Fernanda Espinosa · Business Bending · Operator
+This repository mirrors the original staged development; each replay commit cites its original source hash. Images are optimized copies of the same visuals. Original source history is retained in the source bundle delivered separately.
 
-Live prototype: https://a-tu-medida-w10.mafer212005.chatgpt.site (owner-private; evaluator access must be arranged).
-
-Buyer-controlled purchase-note intake, source log and print export for one refrigerator listing and two buyer questions. Fictional demonstration data and simulated AI are labeled. No purchases, seller commissions or persistent case storage.
-
-Project files and original staged history are being transferred. This README alone is not the complete submission.
+Live URL: https://a-tu-medida-w10.mafer212005.chatgpt.site (owner-private until owner changes access).
